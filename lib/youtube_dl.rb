@@ -7,7 +7,12 @@ module YoutubeDl
   class YoutubeVideo
     YOUTUBE_DL = File.join(File.expand_path(File.dirname(__FILE__)), "../bin/youtube-dl")
 
-    FORMATS = {18 => {ext: "mp4"}}
+    FORMATS = {
+      38 => {ext: 'mp4'},
+      37 => {ext: 'mp4'},
+      22 => {ext: 'mp4'},
+      18 => {ext: 'mp4'},
+    }
 
     def initialize(page_uri, options = {})
       @uri = URI.parse page_uri
